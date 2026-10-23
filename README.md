@@ -2,6 +2,8 @@
 
 A calm, responsive household budget that turns biweekly pay into a monthly plan. Built with React, TypeScript, and Vite for a static Vercel deployment.
 
+**Live app:** https://week-to-month.vercel.app
+
 ## Use it
 
 The first visit opens an explicitly labeled sample budget. Choose **Make it yours**, enter take-home pay and one regular payday, then enter your opening cash balances. Total cash includes savings, the extra-paycheck reserve, and the annual bills fund. Opening balances should be before any activity you intend to record on that date.
@@ -53,7 +55,11 @@ Browser tests use installed Google Chrome. The Playwright configuration starts a
 
 ## Deployment
 
-Vercel detects Vite; `vercel.json` provides build/output settings and security headers. There are no required environment variables or paid database services. The initial personal deployment targets the `muhammad-husayns-projects` Hobby team. The GitHub repository can be connected for automatic deployments from `main`.
+Vercel detects Vite; `vercel.json` provides build/output settings and security headers. There are no required environment variables or paid database services. The personal deployment is `week-to-month` in the `muhammad-husayns-projects` Hobby team.
+
+The initial production deployment was published successfully through the CLI. The GitHub source and Actions checks are live, but automatic Vercel deployments are not connected yet: the Vercel API reports that the GitHub integration must be installed. Install or configure the [Vercel GitHub App](https://github.com/apps/vercel) for this repository, then connect `Muhammadan92/WeekToMonth` in [Project Settings → Git](https://vercel.com/muhammad-husayns-projects/week-to-month/settings/git), using `main` as production. Until then, publish with `vercel --prod --scope muhammad-husayns-projects` from this linked checkout.
+
+Initial verification: 13 calculation tests, four Chrome browser flows, successful GitHub CI, and a production Chrome smoke check (HTTP 200, setup opens, no browser runtime errors).
 
 Vercel Hobby is limited to personal, non-commercial use. A commercial white-label offering needs an appropriate paid hosting plan: <https://vercel.com/docs/limits/fair-use-guidelines>.
 
